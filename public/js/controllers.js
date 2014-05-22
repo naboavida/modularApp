@@ -36,8 +36,8 @@ myApp.controller('ProjectsCtrl', ['$scope', '$http', function($scope, $http) {
     	console.log($scope.form);
     	$http.post('/api/projects', $scope.form).
 		    success(function(data, status) {
-		      console.log("yeah write!" + status);
-		      console.log(data);
+		      // console.log("yeah write!" + status);
+		      // console.log(data);
 		      $scope.projects = data;
 		    }).
 		    error(function (data, status) {
