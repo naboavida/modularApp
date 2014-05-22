@@ -1,0 +1,8 @@
+extend ../views/layout
+
+block content
+	div(ng-controller="ProjectsCtrl")
+		div(ng-repeat='project in projects')
+			p {{project.title}} {{project.area}}
+	p: a(href='/addProject') Add new project
+	p: a(href='/login') Logout

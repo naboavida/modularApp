@@ -1,0 +1,13 @@
+extend ../views/layout
+
+block content
+	div(ng-controller="ProjectsCtrl")
+		div(ng-repeat='project in projects')
+			p {{project.title}} {{project.area}}
+		//- form(action='/addProject', method='post')
+		div
+			p: input(placeholder='Project Name', name='title', ng-model='form.title')
+			p: input(placeholder='Area', name='area', ng-model='form.area')
+			p: button(ng-click='submitNewProject()') Adicionar
+	p: a(href='/projects') Back
+	p: a(href='/login') Logout
